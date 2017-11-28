@@ -2,6 +2,9 @@ syntax on
 
 let g:gruvbox_contrast_dark='hard'
 
+set backupdir=$TMPDIR//
+set directory=$TMPDIR//
+
 set t_Co=256
 set background=dark
 
