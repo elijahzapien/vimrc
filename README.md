@@ -6,11 +6,79 @@ Vim RC setup
 
 ### Miscellaneous useful commands
 
+
+#### Search
+
+n - go to next occurence
+N - go to previous occurence
+ggn - jump to first match
+GN - jump to last match
+
+Search forwards by pattern:
+
+```
+/blahblah
+```
+
+Search backwards by pattern:
+
+```
+?blahblah
+```
+
+Search current word (exact) forwards (move cursor to any word in normal mode):
+
+```
+*
+```
+
+Search current word (exact) backwards (move cursor to any word in normal mode):
+
+```
+#
+```
+
+Search current word (non-exact) forwards (move cursor to any word in normal mode):
+
+```
+g*
+```
+
+Search current word (non-exact) backwards (move cursor to any word in normal mode):
+
+```
+g#
+```
+
+Search and list all lines containing a word (shows in Quickfix menu)
+
+```
+:g/blahblah
+```
+
 Search entire current working directory:
 
 ```
 :vim 'string to search' glob/to/search/**/*.js | :cw
 ```
+
+#### Search Highlighting
+
+TODO:
+http://vim.wikia.com/wiki/VimTip14
+
+#### Search & Replace
+
+Search & replace all
+
+```
+:%s/search phrase/replace phrase/g
+```
+
+TODO:
+http://vim.wikia.com/wiki/VimTip31
+
+#### Copy
 
 Copy selected text to clipboard (from "Visual" mode):
 
@@ -31,6 +99,8 @@ Paste from clipboard:
 ```
 :r !pbpaste
 ```
+
+
 
 ### Miscellaneous netrw useful commands
 
