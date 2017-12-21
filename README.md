@@ -148,3 +148,13 @@ Return to a bookmarked directoy
 ```
 :{i}gb
 ```
+
+### Resources:
+
+#### netrw
+
+* https://shapeshed.com/vim-netrw/
+
+#### ctags
+
+* https://andrew.stwrt.ca/posts/vim-ctags/
