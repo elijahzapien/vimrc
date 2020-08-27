@@ -1,13 +1,65 @@
 # vimrc
-Vim RC setup
 
-### Color Scheme
+## Setup
+
+### 1. Install Plugin Manager
+[pathogen](https://github.com/tpope/vim-pathogen)
+
+```
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+```
+
+### 2. Install Theme
 [gruvbox](https://github.com/morhetz/gruvbox)
 
-### Miscellaneous useful commands
+```
+git clone https://github.com/morhetz/gruvbox.git ~/.vim/bundle/gruvbox
+```
 
+### 3. Add .vimrc contents
 
-#### Search
+Paste the contents of the .vimrc file in this repo to your computer
+
+```
+vim ~/.vimrc
+```
+
+## Mappings
+
+Quickly Edit .vimrc file:
+
+```
+,ev
+```
+
+Reload .vimrc file:
+
+```
+,sv
+```
+
+Clear last search results:
+
+```
+,sc
+```
+
+Copy entire file to clipboard:
+
+```
+,cf
+```
+
+Quick window movements:
+
+```
+Ctrl+w (h,j,k,l)
+```
+
+## Miscellaneous Useful Commands
+
+#### Searching
 
 n - go to next occurence
 N - go to previous occurence
@@ -62,11 +114,6 @@ Search entire current working directory:
 :vim 'string to search' glob/to/search/**/*.js | :cw
 ```
 
-#### Search Highlighting
-
-TODO:
-http://vim.wikia.com/wiki/VimTip14
-
 #### Search & Replace
 
 Search & replace all
@@ -75,33 +122,6 @@ Search & replace all
 :%s/search phrase/replace phrase/g
 ```
 
-TODO:
-http://vim.wikia.com/wiki/VimTip31
-
-#### Copy
-
-Copy selected text to clipboard (from "Visual" mode):
-
-Type 'v', and select text then
-
-```
-:w !pbcopy
-```
-
-Copy entire file to clipboad:
-
-```
-:%w !pbcopy
-```
-
-Paste from clipboard:
-
-```
-:r !pbpaste
-```
-
-
-
 ### Miscellaneous netrw useful commands
 
 #### Directory Exploration
@@ -109,8 +129,6 @@ Paste from clipboard:
 [N]    Specify the quantity of rews and/or columns the explorer window should have.
 
 [dir]  Explicitly provide a directory to open.
-
-
 
 Explore directory of current file:
 
@@ -121,13 +139,14 @@ Non-!  window will only be split if the file has been modified and 'hidden' is n
 ```
 :[N]Explore[!]
 ```
-
-:[N]Hexplore[!] [dir]   Horizontal Split & Explore
-:[N]Lexplore[!] [dir]   Left Explorer Tiggle
-:[N]Sexplore[!] [dir]   Split & Explore current file's directory
-:[N]Vexplore[!] [dir]   Vertical Split & Explore
-:Texplore               Tab & Explore
-:Rexplore               Return to/from Explorer
+| Command | Description |
+| ------- | ----------- |
+|:[N]Hex[!] [dir] | Horizontal Split & Explore |
+| :[N]Lex[!] [dir] | Left Explorer Tiggle |
+| :[N]Sex[!] [dir] | Split & Explore current file's directory |
+| :[N]Vex[!] [dir] | Vertical Split & Explore |
+| :Tex | Tab & Explore |
+| :Rex | Return to/from Explorer |
 
 #### Bookmarks
 
